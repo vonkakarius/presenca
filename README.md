@@ -1,2 +1,5 @@
-# presenca
-Conferência de participações em um evento
+# Presença
+
+Site para conferência de participações em um evento.
+
+# Imagens

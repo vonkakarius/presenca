@@ -1,0 +1,241 @@
+/* Estilos gerais */
+
+:root
+{
+    --accent-color: #AFB49F;
+    --surface: #0E101B;
+    --surface-secondary: #17192b;
+    --shadow-card: 0 40px 20px -20px #00000055;
+    --shadow-card-hover: 0 55px 25px -30px #00000055;
+}
+
+@font-face
+{
+    font-family: 'Jost';
+    src: url('fonts/jost/Jost-Variable.ttf');
+}
+
+@font-face
+{
+    font-family: 'Jost Light';
+    src: url('fonts/jost/Jost-Light.ttf');
+}
+
+@font-face
+{
+    font-family: 'Jost Regular';
+    src: url('fonts/jost/Jost-Regular.ttf');
+}
+
+@font-face
+{
+    font-family: 'Jost Medium';
+    src: url('fonts/jost/Jost-Medium.ttf');
+}
+
+@font-face
+{
+    font-family: 'Jost SemiBold';
+    src: url('fonts/jost/Jost-SemiBold.ttf');
+}
+
+@font-face
+{
+    font-family: 'Jost Bold';
+    src: url('fonts/jost/Jost-Bold.ttf');
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Jost';
+    color: white;
+}
+
+header
+{
+    background-color: var(--surface-secondary);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+}
+
+form
+{
+    background-color: var(--surface);
+    width: fit-content;
+    padding: 1.5em 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    row-gap: 1em;
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+}
+
+.dado
+{
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3em;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"]
+{
+    width: 100%;
+    height: 2.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+}
+
+#options
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#filtro
+{
+    display: flex;
+    gap: 0.5em;
+}
+
+select, button
+{
+    width: 10em;
+    background-color: white;
+    font-family: inherit;
+    height: 2.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    align-self: flex-end;
+}
+
+main
+{
+    background-color: var(--surface);
+    padding: 4em;
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+}
+
+#participantes
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1.5em;
+    row-gap: 2em;
+}
+
+.card
+{
+    background-color: var(--surface-secondary);
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease-in-out;
+}
+
+.card.selected
+{
+    background-color: #D64550;
+}
+
+.card img
+{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.dados
+{
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    padding: 1em 1.2em;
+    letter-spacing: 0.03em;
+}
+
+.card h2
+{
+    font-family: 'Jost Medium';
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.card h3
+{
+    font-family: 'Jost Light';
+    font-size: 13px;
+}
+
+.card h4
+{
+    margin-top: auto;
+    font-family: 'Jost Light';
+    font-size: 13px;
+}
+
+.card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+@media (max-width: 500px)
+{
+    form
+    {
+        width: 100%;
+    }
+
+    .dado
+    {
+        max-width: none;
+    }
+
+    #filtro
+    {
+        flex-direction: column;
+    }
+
+    .card
+    {
+        width: 100%;
+    }
+
+    .card img
+    {
+        height: 500px;
+    }    
+}
